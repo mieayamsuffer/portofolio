@@ -22,3 +22,94 @@ section {
 #gallery .row > * {
     padding:0;
 }
+
+.animation-box {
+    position: relative;
+    background-color: #0c6efd;
+    border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+}
+
+.animation-box::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.animation-box:hover::before{
+    
+    opacity: 0.2;
+}
+.animation-box::after {
+    content: 'ANIMATION';
+    position: absolute;
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.animation-box:hover::after{
+    
+    opacity:0.1;
+}
+
+.animation-name{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translate3d(0,0,50px);
+}
+
+.animation-box:hover .animation-name{
+    top: 20px;
+    opacity: 1;
+}
+
+.animation-detail-button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.animation-box:hover .animation-detail-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.animation-img{
+    position: absolute;
+    top:220px;
+    left: 50%;
+    transform: translate3d(-53%, -50%, 80px);
+    max-width: 300px;
+    transition: 0.5s;
+}
+
+.animation-box:hover .animation-img{
+    transform: translate3d(-53%, -50%, 100px) rotate(-10deg) scale(1.2);
+    
+}
+

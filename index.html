@@ -372,6 +372,40 @@
           </div>
         </div>
       </div>
+      <!-- Animation -->
+    <section id="my-animations">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Animations</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="animation-box">
+              <h4 class="animation-name">Anjlnk</h4>
+              <img src="img/images/1.png" alt="gambar 1" class="animation-img" >
+              <a href="" class="btn btn-light animation-detail-button">Show Detail</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="animation-box">
+              <h4 class="animation-name">Anjlnk</h4>
+              <img src="img/images/2.png" alt="gambar 1" class="animation-img" >
+              <a href="" class="btn btn-light animation-detail-button">Show Detail</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="animation-box">
+              <h4 class="animation-name">Anjlnk</h4>
+              <img src="img/images/3.png" alt="gambar 1" class="animation-img" >
+              <a href="" class="btn btn-light animation-detail-button">Show Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EndAnimation -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0d6efd"
@@ -446,5 +480,16 @@
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".animation-box"), {
+        max: 25,
+        speed: 400
+      });
+      
+      //It also supports NodeList
+      VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
+    </body>
   </body>
 </html>
